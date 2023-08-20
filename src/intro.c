@@ -3294,17 +3294,17 @@ static u8 CreateGameFreakLogoSprites(s16 x, s16 y, s16 unused)
     u8 spriteId;
 
     // Create "Game Freak" letters
-    for (i = 0; i < NUM_GF_LETTERS; i++)
-    {
-        spriteId = CreateSprite(&sSpriteTemplate_GameFreakLetter, sGameFreakLetterData[i][1] + x, y - 4, 0);
-        gSprites[spriteId].sState = 0;
-        gSprites[spriteId].sTimer = sGameFreakLetterStartDelays[i];
-        gSprites[spriteId].sLetterId = i;
-        gSprites[spriteId].invisible = TRUE;
-        gSprites[spriteId].oam.matrixNum = i + 12;
-        StartSpriteAnim(&gSprites[spriteId], sGameFreakLetterData[i][0]);
-        StartSpriteAffineAnim(&gSprites[spriteId], 0);
-    }
+    // for (i = 0; i < NUM_GF_LETTERS; i++)
+    // {
+    //     spriteId = CreateSprite(&sSpriteTemplate_GameFreakLetter, sGameFreakLetterData[i][1] + x, y - 4, 0);
+    //     gSprites[spriteId].sState = 0;
+    //     gSprites[spriteId].sTimer = sGameFreakLetterStartDelays[i];
+    //     gSprites[spriteId].sLetterId = i;
+    //     gSprites[spriteId].invisible = TRUE;
+    //     gSprites[spriteId].oam.matrixNum = i + 12;
+    //     StartSpriteAnim(&gSprites[spriteId], sGameFreakLetterData[i][0]);
+    //     StartSpriteAffineAnim(&gSprites[spriteId], 0);
+    // }
 
     // Create Game Freak logo
     spriteId = CreateSprite(&sSpriteTemplate_GameFreakLogo, 120, y - 6, 0);

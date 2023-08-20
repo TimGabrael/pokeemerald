@@ -46,7 +46,7 @@ EventScript_CancelCut::
 	end
 
 Text_WantToCut:
-	.string "This tree looks like it can be\n"
+	.string "This abomination looks like it can be\n"
 	.string "CUT down!\p"
 	.string "Would you like to CUT it?$"
 
@@ -54,8 +54,8 @@ Text_MonUsedFieldMove:
 	.string "{STR_VAR_1} used {STR_VAR_2}!$"
 
 Text_CantCut:
-	.string "This tree looks like it can be\n"
-	.string "CUT down!$"
+	.string "This tree looks pathetic\n"
+	.string "CUT it down!$"
 
 @ Interact with smashable rock
 EventScript_RockSmash::
@@ -118,8 +118,8 @@ Text_WantToSmash:
 	.string "Would you like to use ROCK SMASH?$"
 
 Text_CantSmash:
-	.string "It's a rugged rock, but a POKéMON\n"
-	.string "may be able to smash it.$"
+	.string "It's not a boulder.\n"
+	.string "It's a rock.$"
 
 EventScript_StrengthBoulder::
 	lockall

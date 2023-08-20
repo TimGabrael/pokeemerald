@@ -289,17 +289,16 @@ Route103_EventScript_Isabelle::
 	end
 
 Route103_Text_MayRoute103Pokemon:
-	.string "MAY: Let's see… The POKéMON found\n"
-	.string "on ROUTE 103 include…$"
+	.string "MAY: Let's see… The pineapple juice\n"
+	.string "is supposed to…$"
 
 Route103_Text_MayLetsBattle:
 	.string "Oh, hi, {PLAYER}{KUN}!\p"
 	.string "…Oh, I see, my dad gave you\n"
-	.string "a POKéMON as a gift.\p"
+	.string "a toy as a gift.\p"
 	.string "Since we're here, let's have a quick\n"
-	.string "battle!\p"
-	.string "I'll give you a taste of what being\n"
-	.string "a TRAINER is like.$"
+	.string "schwanzvergleich!\p"
+	.string "I'll give you a taste.$"
 
 Route103_Text_MayDefeated:
 	.string "Wow! That's great!\n"
@@ -308,12 +307,12 @@ Route103_Text_MayDefeated:
 Route103_Text_MayTimeToHeadBack:
 	.string "MAY: I think I know why my dad has\n"
 	.string "an eye out for you now.\p"
-	.string "I mean, you just got that POKéMON,\n"
-	.string "but it already likes you.\p"
-	.string "You might be able to befriend any\n"
-	.string "kind of POKéMON easily.\p"
+	.string "I mean, you just got that toy,\n"
+	.string "but it already has children.\p"
+	.string "You might be able to fuck any\n"
+	.string "kind of toy easily.\p"
 	.string "Well, it's time to head back to\n"
-	.string "the LAB.$"
+	.string "the harem.$"
 
 Route103_Text_BrendanRoute103Pokemon:
 	.string "BRENDAN: Okay, so it's this one and\n"
@@ -341,8 +340,8 @@ Route103_Text_BrendanTimeToHeadBack:
 	.string "We should head back to the LAB.$"
 
 Route103_Text_ShouldHaveBroughtPotion:
-	.string "My POKéMON is staggeringly tired…\n"
-	.string "I should have brought a POTION…$"
+	.string "Nobody wants to smoke white cake with me\n"
+	.string ":($"
 
 Route103_Text_ShortcutToOldale:
 	.string "If you cross the sea from here,\n"

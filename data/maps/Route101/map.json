@@ -186,6 +186,42 @@
       "var": "VAR_ROUTE101_STATE",
       "var_value": "2",
       "script": "Route101_EventScript_PreventExitNorth"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 1,
+      "elevation": 3,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "3",
+      "script": "Route101_EventScript_PreventExitNorthMetin"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 1,
+      "elevation": 3,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "3",
+      "script": "Route101_EventScript_PreventExitNorthMetin"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 1,
+      "elevation": 3,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "3",
+      "script": "Route101_EventScript_PreventExitNorthMetin"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 1,
+      "elevation": 3,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "3",
+      "script": "Route101_EventScript_PreventExitNorthMetin"
     }
   ],
   "bg_events": [
@@ -198,4 +234,5 @@
       "script": "Route101_EventScript_RouteSign"
     }
   ]
+
 }

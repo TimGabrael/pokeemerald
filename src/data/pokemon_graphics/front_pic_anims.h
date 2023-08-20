@@ -99,6 +99,13 @@ static const union AnimCmd sAnim_Metapod_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_Metin_1[] =
+{
+    ANIMCMD_FRAME(1, 45),
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_Butterfree_1[] =
 {
     ANIMCMD_FRAME(0, 5),
@@ -4834,6 +4841,7 @@ SINGLE_ANIMATION(Wartortle);
 SINGLE_ANIMATION(Blastoise);
 SINGLE_ANIMATION(Caterpie);
 SINGLE_ANIMATION(Metapod);
+SINGLE_ANIMATION(Metin);
 SINGLE_ANIMATION(Butterfree);
 SINGLE_ANIMATION(Weedle);
 SINGLE_ANIMATION(Kakuna);
@@ -5266,6 +5274,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_BLASTOISE]   = sAnims_Blastoise,
     [SPECIES_CATERPIE]    = sAnims_Caterpie,
     [SPECIES_METAPOD]     = sAnims_Metapod,
+    [SPECIES_METIN]       = sAnims_Metin,
     [SPECIES_BUTTERFREE]  = sAnims_Butterfree,
     [SPECIES_WEEDLE]      = sAnims_Weedle,
     [SPECIES_KAKUNA]      = sAnims_Kakuna,

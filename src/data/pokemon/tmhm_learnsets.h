@@ -262,6 +262,9 @@ const union {
     [SPECIES_METAPOD] = { .learnset = {
     } },
 
+    [SPECIES_METIN] = { .learnset = {
+    } },
+
     [SPECIES_BUTTERFREE] = { .learnset = {
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,

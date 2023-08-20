@@ -10,6 +10,7 @@
 #define FRONTIER_MON_MAGIKARP       6
 #define FRONTIER_MON_FEEBAS         7
 #define FRONTIER_MON_METAPOD        8
+#define FRONTIER_MON_METIN          882
 #define FRONTIER_MON_KAKUNA         9
 #define FRONTIER_MON_PICHU          10
 #define FRONTIER_MON_SILCOON        11
@@ -894,6 +895,6 @@
 #define FRONTIER_MON_SUICUNE_5      880
 #define FRONTIER_MON_SUICUNE_6      881
 
-#define NUM_FRONTIER_MONS           882
+#define NUM_FRONTIER_MONS           883
 
 #endif //GUARD_CONSTANTS_BATTLE_FRONTIER_MONS_H

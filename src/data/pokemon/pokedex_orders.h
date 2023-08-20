@@ -227,6 +227,7 @@ const u16 gPokedexOrder_Alphabetical[] =
     NATIONAL_DEX_METAGROSS,
     NATIONAL_DEX_METANG,
     NATIONAL_DEX_METAPOD,
+    NATIONAL_DEX_METIN,
     NATIONAL_DEX_MEW,
     NATIONAL_DEX_MEWTWO,
     NATIONAL_DEX_MIGHTYENA,
@@ -802,6 +803,7 @@ const u16 gPokedexOrder_Weight[] =
     NATIONAL_DEX_SNORLAX,
     NATIONAL_DEX_METAGROSS,
     NATIONAL_DEX_GROUDON,
+    NATIONAL_DEX_METIN,
 };
 
 const u16 gPokedexOrder_Height[] =
@@ -1192,4 +1194,5 @@ const u16 gPokedexOrder_Height[] =
     NATIONAL_DEX_ONIX,
     NATIONAL_DEX_STEELIX,
     NATIONAL_DEX_WAILORD,
+    NATIONAL_DEX_METIN,
 };

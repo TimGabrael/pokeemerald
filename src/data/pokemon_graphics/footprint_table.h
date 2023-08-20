@@ -12,6 +12,7 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_BLASTOISE] = gMonFootprint_Blastoise,
     [SPECIES_CATERPIE] = gMonFootprint_Caterpie,
     [SPECIES_METAPOD] = gMonFootprint_Metapod,
+    [SPECIES_METIN] = gMonFootprint_Metin,
     [SPECIES_BUTTERFREE] = gMonFootprint_Butterfree,
     [SPECIES_WEEDLE] = gMonFootprint_Weedle,
     [SPECIES_KAKUNA] = gMonFootprint_Kakuna,

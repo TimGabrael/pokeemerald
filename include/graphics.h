@@ -110,6 +110,16 @@ extern const u32 gMonShinyPalette_Metapod[];
 extern const u32 gMonStillFrontPic_Metapod[];
 extern const u8 gMonIcon_Metapod[];
 extern const u8 gMonFootprint_Metapod[];
+
+
+extern const u32 gMonFrontPic_Metin[];
+extern const u32 gMonPalette_Metin[];
+extern const u32 gMonBackPic_Metin[];
+extern const u32 gMonShinyPalette_Metin[];
+extern const u32 gMonStillFrontPic_Metin[];
+extern const u8 gMonIcon_Metin[];
+extern const u8 gMonFootprint_Metin[];
+
 extern const u32 gMonFrontPic_Butterfree[];
 extern const u32 gMonPalette_Butterfree[];
 extern const u32 gMonBackPic_Butterfree[];

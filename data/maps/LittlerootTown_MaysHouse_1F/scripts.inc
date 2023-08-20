@@ -329,7 +329,7 @@ RivalsHouse_1F_Text_OhYoureTheNewNeighbor:
 	.string "We have a {STR_VAR_1} about the same\n"
 	.string "age as you.\p"
 	.string "Our {STR_VAR_1} was excited about making\n"
-	.string "a new friend.\p"
+	.string "a few bucks.\p"
 	.string "Our {STR_VAR_1} is upstairs, I think.$"
 
 RivalsHouse_1F_Text_LikeChildLikeFather:
@@ -369,18 +369,18 @@ RivalsHouse_1F_Text_MayWhoAreYou:
 	.string "Um… I'm MAY.\n"
 	.string "Glad to meet you!\p"
 	.string "I…\n"
-	.string "I have this dream of becoming friends\l"
-	.string "with POKéMON all over the world.\p"
+	.string "I have this dream of fucking migits\l"
+	.string "with disabilities all over the world.\p"
 	.string "I… I heard about you, {PLAYER}{KUN}, from\n"
-	.string "my dad, PROF. BIRCH.\p"
+	.string "my dad, PIMP DADDY.\p"
 	.string "I was hoping that you would be nice,\n"
-	.string "{PLAYER}{KUN}, and that we could be friends.\p"
+	.string "{PLAYER}{KUN}, and we could fuck.\p"
 	.string "Oh, this is silly, isn't it?\n"
 	.string "I… I've just met you, {PLAYER}{KUN}.\p"
 	.string "Eheheh…\p"
 	.string "Oh, no! I forgot!\p"
-	.string "I was supposed to go help Dad catch\n"
-	.string "some wild POKéMON!\p"
+	.string "I was supposed to go help Dad collect\n"
+	.string "some protection Money!\p"
 	.string "{PLAYER}{KUN}, I'll catch you later!$"
 
 RivalsHouse_1F_Text_BrendanWhoAreYou:
@@ -406,4 +406,4 @@ RivalsHouse_1F_Text_BrendanWhoAreYou:
 RivalsHouse_1F_Text_DoYouHavePokemon:
 	.string "Hi, neighbor!\p"
 	.string "Do you already have your\n"
-	.string "own POKéMON?$"
+	.string "own Toy?$"

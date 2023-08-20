@@ -201,6 +201,8 @@ static const u32 sTutorLearnsets[] =
 
     [SPECIES_METAPOD]          = (0),
 
+    [SPECIES_METIN]            = (0),
+
     [SPECIES_BUTTERFREE]       = (TUTOR(MOVE_DOUBLE_EDGE)
                                 | TUTOR(MOVE_MIMIC)
                                 | TUTOR(MOVE_DREAM_EATER)

@@ -63,6 +63,7 @@ static bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 static u16 GiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 move);
 static bool8 ShouldSkipFriendshipChange(void);
 static u8 SendMonToPC(struct Pokemon *mon);
+static u8 GetPlayerMaxLevelPokemon(void);
 
 EWRAM_DATA static u8 sLearningMoveTableID = 0;
 EWRAM_DATA u8 gPlayerPartyCount = 0;
@@ -110,6 +111,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(BLASTOISE),
     SPECIES_TO_HOENN(CATERPIE),
     SPECIES_TO_HOENN(METAPOD),
+    SPECIES_TO_HOENN(METIN),
     SPECIES_TO_HOENN(BUTTERFREE),
     SPECIES_TO_HOENN(WEEDLE),
     SPECIES_TO_HOENN(KAKUNA),
@@ -526,6 +528,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(BLASTOISE),
     SPECIES_TO_NATIONAL(CATERPIE),
     SPECIES_TO_NATIONAL(METAPOD),
+    SPECIES_TO_NATIONAL(METIN),
     SPECIES_TO_NATIONAL(BUTTERFREE),
     SPECIES_TO_NATIONAL(WEEDLE),
     SPECIES_TO_NATIONAL(KAKUNA),
@@ -1144,6 +1147,7 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(BLASTOISE),
     HOENN_TO_NATIONAL(CATERPIE),
     HOENN_TO_NATIONAL(METAPOD),
+    HOENN_TO_NATIONAL(METIN),
     HOENN_TO_NATIONAL(BUTTERFREE),
     HOENN_TO_NATIONAL(WEEDLE),
     HOENN_TO_NATIONAL(KAKUNA),
@@ -1407,6 +1411,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_BLASTOISE - 1]   = ANIM_V_SHAKE_TWICE,
     [SPECIES_CATERPIE - 1]    = ANIM_SWING_CONCAVE,
     [SPECIES_METAPOD - 1]     = ANIM_SWING_CONCAVE,
+    [SPECIES_METIN - 1]       = ANIM_H_VIBRATE,
     [SPECIES_BUTTERFREE - 1]  = ANIM_H_SLIDE_WOBBLE,
     [SPECIES_WEEDLE - 1]      = ANIM_H_SLIDE_SLOW,
     [SPECIES_KAKUNA - 1]      = ANIM_GLOW_ORANGE,
@@ -2184,9 +2189,28 @@ void ZeroEnemyPartyMons(void)
         ZeroMonData(&gEnemyParty[i]);
 }
 
+static u8 GetPlayerMaxLevelPokemon(void)
+{
+    u8 i;
+    u8 max;
+    u8 cur;
+    max = 0;
+    for(i = 0; i < gPlayerPartyCount; i++) {
+        if(max < gPlayerParty[i].level) {
+            max = gPlayerParty[i].level;
+        }
+    }
+    return max;
+}
+
 void CreateMon(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 hasFixedPersonality, u32 fixedPersonality, u8 otIdType, u32 fixedOtId)
 {
     u32 mail;
+    //u8 maxPlayerLevel;
+    //maxPlayerLevel = GetPlayerMaxLevelPokemon();
+    //if(level < maxPlayerLevel) {
+    //    level = maxPlayerLevel;
+    //}
     ZeroMonData(mon);
     CreateBoxMon(&mon->box, species, level, fixedIV, hasFixedPersonality, fixedPersonality, otIdType, fixedOtId);
     SetMonData(mon, MON_DATA_LEVEL, &level);

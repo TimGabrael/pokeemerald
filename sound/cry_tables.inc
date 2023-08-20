@@ -11,6 +11,9 @@ gCryTable::
 	cry Cry_Blastoise
 	cry Cry_Caterpie
 	cry Cry_Metapod
+
+	cry Cry_Metin
+
 	cry Cry_Butterfree
 	cry Cry_Weedle
 	cry Cry_Kakuna
@@ -402,6 +405,9 @@ gCryTable_Reverse::
 	cry_reverse Cry_Blastoise
 	cry_reverse Cry_Caterpie
 	cry_reverse Cry_Metapod
+
+	cry_reverse Cry_Metin
+
 	cry_reverse Cry_Butterfree
 	cry_reverse Cry_Weedle
 	cry_reverse Cry_Kakuna

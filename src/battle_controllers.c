@@ -12,6 +12,8 @@
 #include "task.h"
 #include "util.h"
 #include "constants/abilities.h"
+#include "event_data.h"
+#include "string_util.h"
 
 static EWRAM_DATA u8 sLinkSendTaskId = 0;
 static EWRAM_DATA u8 sLinkReceiveTaskId = 0;
@@ -62,7 +64,7 @@ void SetUpBattleVarsAndBirchZigzagoon(void)
     if (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
     {
         ZeroEnemyPartyMons();
-        CreateMon(&gEnemyParty[0], SPECIES_ZIGZAGOON, 2, USE_RANDOM_IVS, 0, 0, OT_ID_PLAYER_ID, 0);
+        CreateMon(&gEnemyParty[0], SPECIES_JYNX, 5, USE_RANDOM_IVS, 0, 0, OT_ID_PLAYER_ID, 0);
         i = 0;
         SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, &i);
     }
@@ -1527,3 +1529,24 @@ void BtlController_EmitEndLinkBattle(u8 bufferId, u8 battleOutcome)
     sBattleBuffersTransferData[5] = sBattleBuffersTransferData[4] = RecordedBattle_BufferNewBattlerData(&sBattleBuffersTransferData[6]);
     PrepareBufferDataTransfer(bufferId, sBattleBuffersTransferData, sBattleBuffersTransferData[4] + 6);
 }
+
+
+
+void GetMetinKillCountString(void) 
+{
+    u16 killed = VarGet(VAR_METINS_KILLED);
+    memset(gStringVar1, 0, sizeof(gStringVar1));
+    ConvertIntToDecimalStringN(gStringVar1, killed, STR_CONV_MODE_RIGHT_ALIGN, 2);
+}
+
+u16 CheckFaintedMetinAndGetMonSpecies(void)
+{
+    u16 numMetinsKilled;
+    u16 species = GetMonData(&gEnemyParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_SPECIES);
+    if(species == SPECIES_METIN) {
+        numMetinsKilled = VarGet(VAR_METINS_KILLED);
+        VarSet(VAR_METINS_KILLED, numMetinsKilled + 1);
+    }
+    return species;
+}
+

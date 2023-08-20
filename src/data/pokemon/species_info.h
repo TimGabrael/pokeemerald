@@ -11664,5 +11664,36 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
-    }
+    },
+
+    [SPECIES_METIN] =
+    {
+        .baseHP        = 80,
+        .baseAttack    = 1,
+        .baseDefense   = 55,
+        .baseSpeed     = 10,
+        .baseSpAttack  = 15,
+        .baseSpDefense = 15,
+        .types = { TYPE_ROCK, TYPE_ROCK },
+        .catchRate = 120,
+        .expYield = 100,
+        .evYield_HP        = 0,
+        .evYield_Attack    = 0,
+        .evYield_Defense   = 2,
+        .evYield_Speed     = 0,
+        .evYield_SpAttack  = 0,
+        .evYield_SpDefense = 0,
+        .itemCommon = ITEM_NONE,
+        .itemRare   = ITEM_NONE,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
+        .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
+        .safariZoneFleeRate = 0,
+        .bodyColor = BODY_COLOR_GRAY,
+        .noFlip = FALSE,
+    },
+
 };

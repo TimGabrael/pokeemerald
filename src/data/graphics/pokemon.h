@@ -75,6 +75,13 @@ const u32 gMonShinyPalette_Metapod[] = INCBIN_U32("graphics/pokemon/metapod/shin
 const u8 gMonIcon_Metapod[] = INCBIN_U8( "graphics/pokemon/metapod/icon.4bpp");
 const u8 gMonFootprint_Metapod[] = INCBIN_U8("graphics/pokemon/metapod/footprint.1bpp");
 
+const u32 gMonStillFrontPic_Metin[] = INCBIN_U32("graphics/pokemon/metin/front.4bpp.lz");
+const u32 gMonPalette_Metin[] = INCBIN_U32("graphics/pokemon/metin/normal.gbapal.lz");
+const u32 gMonBackPic_Metin[] = INCBIN_U32("graphics/pokemon/metin/back.4bpp.lz");
+const u32 gMonShinyPalette_Metin[] = INCBIN_U32("graphics/pokemon/metin/shiny.gbapal.lz");
+const u8 gMonIcon_Metin[] = INCBIN_U8( "graphics/pokemon/metin/icon.4bpp");
+const u8 gMonFootprint_Metin[] = INCBIN_U8("graphics/pokemon/metin/footprint.1bpp");
+
 const u32 gMonStillFrontPic_Butterfree[] = INCBIN_U32("graphics/pokemon/butterfree/front.4bpp.lz");
 const u32 gMonPalette_Butterfree[] = INCBIN_U32("graphics/pokemon/butterfree/normal.gbapal.lz");
 const u32 gMonBackPic_Butterfree[] = INCBIN_U32("graphics/pokemon/butterfree/back.4bpp.lz");

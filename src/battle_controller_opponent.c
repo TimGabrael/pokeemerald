@@ -1843,7 +1843,7 @@ static void OpponentHandlePlayFanfareOrBGM(void)
 
 static void OpponentHandleFaintingCry(void)
 {
-    u16 species = GetMonData(&gEnemyParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_SPECIES);
+    u16 species = CheckFaintedMetinAndGetMonSpecies();
 
     PlayCry_ByMode(species, 25, CRY_MODE_FAINT);
     OpponentBufferExecCompleted();

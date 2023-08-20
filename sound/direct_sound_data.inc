@@ -431,6 +431,11 @@ Cry_Metapod::
 	.incbin "sound/direct_sound_samples/cries/metapod.bin"
 
 	.align 2
+Cry_Metin::
+	.incbin "sound/direct_sound_samples/cries/metapod.bin"
+
+
+	.align 2
 Cry_Butterfree::
 	.incbin "sound/direct_sound_samples/cries/butterfree.bin"
 

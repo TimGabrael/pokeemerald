@@ -13,6 +13,7 @@ static const u32 sUnused[] =
     [SPECIES_BLASTOISE]   = 0x886,
     [SPECIES_CATERPIE]    = 0x888,
     [SPECIES_METAPOD]     = 0x888,
+    [SPECIES_METIN]       = 0x888,
     [SPECIES_BUTTERFREE]  = 0x888,
     [SPECIES_WEEDLE]      = 0x888,
     [SPECIES_KAKUNA]      = 0x888,

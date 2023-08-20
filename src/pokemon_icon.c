@@ -36,6 +36,9 @@ const u8 *const gMonIconTable[] =
     [SPECIES_BLASTOISE] = gMonIcon_Blastoise,
     [SPECIES_CATERPIE] = gMonIcon_Caterpie,
     [SPECIES_METAPOD] = gMonIcon_Metapod,
+
+    [SPECIES_METIN] = gMonIcon_Metin,
+
     [SPECIES_BUTTERFREE] = gMonIcon_Butterfree,
     [SPECIES_WEEDLE] = gMonIcon_Weedle,
     [SPECIES_KAKUNA] = gMonIcon_Kakuna,
@@ -480,6 +483,7 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_BLASTOISE] = 2,
     [SPECIES_CATERPIE] = 1,
     [SPECIES_METAPOD] = 1,
+    [SPECIES_METIN] = 1,
     [SPECIES_BUTTERFREE] = 0,
     [SPECIES_WEEDLE] = 1,
     [SPECIES_KAKUNA] = 2,

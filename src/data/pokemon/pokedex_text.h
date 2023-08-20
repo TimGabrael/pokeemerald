@@ -70,6 +70,12 @@ const u8 gMetapodPokedexText[] = _(
     "because it is preparing its soft innards\n"
     "for evolution inside the shell.");
 
+const u8 gMetinPokedexText[] = _(
+    "Absolutely Useless.\n"
+    "But you have  to keep on grinding\n"
+    "In Love: Liebe!.");
+
+
 const u8 gButterfreePokedexText[] = _(
     "It has a superior ability to search for\n"
     "delicious honey from flowers. It can seek,\n"

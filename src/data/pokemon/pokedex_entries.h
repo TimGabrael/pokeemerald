@@ -144,6 +144,18 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
+    [NATIONAL_DEX_METIN] =
+    {
+        .categoryName = _("ROCKBOY"),
+        .height = 800,
+        .weight = 9999,
+        .description = gMetinPokedexText,
+        .pokemonScale = 350,
+        .pokemonOffset = 18,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
     [NATIONAL_DEX_BUTTERFREE] =
     {
         .categoryName = _("BUTTERFLY"),

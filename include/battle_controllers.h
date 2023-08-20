@@ -281,4 +281,8 @@ void SetControllerToLinkOpponent(void);
 // link partner
 void SetControllerToLinkPartner(void);
 
+
+// increases the metin killed counter, and does more stuff
+u16 CheckFaintedMetinAndGetMonSpecies(void);
+
 #endif // GUARD_BATTLE_CONTROLLERS_H

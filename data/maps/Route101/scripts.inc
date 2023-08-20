@@ -62,6 +62,33 @@ Route101_EventScript_PreventExitWest::
 	releaseall
 	end
 
+Route101_PreventExitNorthMetin::
+    special GetMetinKillCountString
+	lockall
+    msgbox Route101_Text_Metin, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_PreventExitNorth
+	waitmovement 0
+	releaseall
+    end
+
+Route101_IncrementStateMetin::
+    setvar VAR_ROUTE101_STATE, 4
+    lockall
+    msgbox Route101_Text_YouDidIt, MSGBOX_DEFAULT
+    closemessage
+    releaseall
+    end
+
+
+Route101_EventScript_PreventExitNorthMetin::
+    call_if_le VAR_METINS_KILLED, 7, Route101_PreventExitNorthMetin
+    call_if_ge VAR_METINS_KILLED, 8, Route101_IncrementStateMetin
+	end
+
+
+
+
 Route101_EventScript_PreventExitNorth::
 	lockall
 	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
@@ -261,40 +288,47 @@ Route101_Movement_BirchApproachPlayer:
 	step_end
 
 Route101_Text_HelpMe:
-	.string "H-help me!$"
+	.string "Fuck off, you drug addict!$"
 
 Route101_Text_PleaseHelp:
 	.string "Hello! You over there!\n"
 	.string "Please! Help!\p"
 	.string "In my BAG!\n"
-	.string "There's a POKé BALL!$"
+	.string "There's a syringe filled with heroin!$"
 
 Route101_Text_DontLeaveMe:
 	.string "Wh-Where are you going?!\n"
 	.string "Don't leave me like this!$"
 
+Route101_Text_Metin:
+    .string "Kill 8 Metins to progress.\n"
+    .string "You killed: {STR_VAR_1}.$"
+
+Route101_Text_YouDidIt:
+    .string "You did it!!!!\n"
+    .string "And you aren't banned!\l"
+    .string "What a time to be alive!$"
+
 Route101_Text_YouSavedMe:
-	.string "PROF. BIRCH: Whew…\p"
-	.string "I was in the tall grass studying wild\n"
-	.string "POKéMON when I was jumped.\p"
+	.string "PIMP DADDY: Whew…\p"
+	.string "I was rubbing one out\n"
+	.string "when I was jumped.\p"
 	.string "You saved me.\n"
 	.string "Thanks a lot!\p"
 	.string "Oh?\p"
 	.string "Hi, you're {PLAYER}{KUN}!\p"
 	.string "This is not the place to chat, so come\n"
-	.string "by my POKéMON LAB later, okay?$"
+	.string "by my harem later, okay?$"
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
-	.string "If POKéMON get tired, take them to\n"
-	.string "a POKéMON CENTER.\p"
-	.string "There's a POKéMON CENTER in OLDALE\n"
-	.string "TOWN right close by.$"
+	.string "LACKSCHUH DIETEEER\n"
+	.string "TANZ IM KREIS"
+	.string "$"
 
 Route101_Text_WildPokemonInTallGrass:
-	.string "Wild POKéMON will jump out at you in\n"
-	.string "tall grass.\p"
-	.string "If you want to catch POKéMON, you have\n"
-	.string "to go into the tall grass and search.$"
+    .string "Go somewhere else a customer\n"
+    .string "will come in a minute"
+	.string "$"
 
 Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
