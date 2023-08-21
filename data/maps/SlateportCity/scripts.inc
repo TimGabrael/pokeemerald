@@ -109,6 +109,34 @@ SlateportCity_EventScript_ScottScene::
 	releaseall
 	end
 
+SlateportCity_Movement_PreventExitNorth:
+	walk_down
+	step_end
+
+SlateportCity_PreventExitNorthMetin::
+    special GetMetinKillCountString
+	lockall
+    msgbox SlateportCity_Text_Metin, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, SlateportCity_Movement_PreventExitNorth
+	waitmovement 0
+	releaseall
+    end
+
+SlateportCity_IncrementStateMetin::
+    setvar VAR_ROUTE101_STATE, 5
+    special GetMetinKillCountString
+    lockall
+    msgbox SlateportCity_Text_YouDidIt, MSGBOX_DEFAULT
+    closemessage
+    releaseall
+    end
+
+SlateportCity_EventScript_MetinCheck::
+    call_if_le VAR_METINS_KILLED, 15, SlateportCity_PreventExitNorthMetin
+    call_if_ge VAR_METINS_KILLED, 16, SlateportCity_IncrementStateMetin
+    end
+
 SlateportCity_Movement_PlayerFaceScott:
 	delay_16
 	delay_8
@@ -949,6 +977,38 @@ SlateportCity_EventScript_BerryCrushRankingsSign::
 	waitstate
 	releaseall
 	end
+
+SlateportCity_EventScript_ModCreatorRematch::
+	trainerbattle_rematch TRAINER_MOD_CREATOR_SLATEPORT, SlateportCity_Text_ModCreatorIntro, SlateportCity_Text_ModCreatorDefeated
+	msgbox SlateportCity_Text_ModCreatorDefeated, MSGBOX_AUTOCLOSE
+	end
+
+SlateportCity_EventScript_ModCreator::
+	trainerbattle_single TRAINER_MOD_CREATOR_SLATEPORT, SlateportCity_Text_ModCreatorIntro, SlateportCity_Text_ModCreatorDefeated
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, SlateportCity_EventScript_ModCreatorRematch
+	msgbox SlateportCity_Text_ModCreatorPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+SlateportCity_Text_ModCreatorIntro:
+    .string "Thou, who approacheth Destined Death.\n"
+    .string "I will not have it stolen from me again.$"
+SlateportCity_Text_ModCreatorDefeated:
+    .string "Witless Tarnished…\n"
+    .string "Why covet Destined Death?\l"
+    .string "To kill what?$"
+
+SlateportCity_Text_ModCreatorPostBattle:
+    .string "Thy strength befits a crown$"
+
+SlateportCity_Text_Metin:
+    .string "Kill 16 Metins to progress…\n"
+    .string "You know the drill$"
+
+SlateportCity_Text_YouDidIt:
+    .string "You have killed {STR_VAR_1} Metins.\n"
+    .string "Quite impressive!$"
 
 SlateportCity_Text_EnergyGuruSellWhatYouNeed:
 	.string "I'm the ENERGY GURU! I'll go for it and\n"

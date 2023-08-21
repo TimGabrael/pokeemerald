@@ -1536,7 +1536,7 @@ void GetMetinKillCountString(void)
 {
     u16 killed = VarGet(VAR_METINS_KILLED);
     memset(gStringVar1, 0, sizeof(gStringVar1));
-    ConvertIntToDecimalStringN(gStringVar1, killed, STR_CONV_MODE_RIGHT_ALIGN, 2);
+    ConvertIntToDecimalStringN(gStringVar1, killed, STR_CONV_MODE_RIGHT_ALIGN, 5);
 }
 
 u16 CheckFaintedMetinAndGetMonSpecies(void)
